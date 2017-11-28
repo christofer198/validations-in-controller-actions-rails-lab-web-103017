@@ -8,6 +8,7 @@ class AuthorsController < ApplicationController
 
   def create
     @author = Author.create!(author_params)
+    
     if @author.valid?
       # If--and only if--the post is valid, do what we usually do.
       @author.save
